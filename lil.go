@@ -11,17 +11,18 @@ import (
 )
 
 func main() {
-  usage := "Usage: lil <name>"
+  usage := "Usage: lil <name> [<port>]"
   app := cli.NewApp()
   app.Name = "lil"
   app.Usage = usage
   app.Action = func(c *cli.Context){
-    if(len(c.Args().First()) == 0){
+    args := c.Args()
+    if(len(args.First()) == 0){
       println(usage)
       return
     }
 
-    url := fmt.Sprint("https://lil.firebaseio.com/", c.Args()[0], ".json")
+    url := fmt.Sprint("https://lil.firebaseio.com/", args[0], ".json")
     client := &http.Client{}
     ip, err := externalIP()
     if err != nil {
@@ -29,7 +30,11 @@ func main() {
       return
     }
 
+    if(len(args) == 2){
+      ip += ":" + args[1];
+    }
     ip = "\"" + ip + "\""
+
     request, err := http.NewRequest("PUT", url, strings.NewReader(ip))
     request.ContentLength = int64(len(ip))
     _, err = client.Do(request)
