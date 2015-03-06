@@ -2,9 +2,10 @@
 <head>
 <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 <script>
-  var db = new Firebase("https://lil.firebaseio.com/");
-  db.child(window.location.search.substr(1)).on('value', function(snapshot){
-    window.location = snapshot.val();
+  var db = new Firebase("https://lil.firebaseio.com/" + window.location.search.substr(1));
+  db.on('value', function(snapshot){
+  debugger;
+    window.location = '//' + snapshot.val();
   });
 </script>
 </head>
