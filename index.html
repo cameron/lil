@@ -2,9 +2,8 @@
 <head>
 <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 <script>
-  var db = new Firebase("https://lil.firebaseio.com/" + window.location.search.substr(1));
+  var db = new Firebase("https://lil.firebaseio.com/" + window.location.hostname.replace('.lilup.io', ''));
   db.on('value', function(snapshot){
-  debugger;
     window.location = '//' + snapshot.val();
   });
 </script>
