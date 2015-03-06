@@ -1,13 +1,33 @@
 <html>
 <head>
-<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
-<script>
-  var db = new Firebase("https://lil.firebaseio.com/" + window.location.hostname.replace('.lilup.co', ''));
-  db.on('value', function(snapshot){
-    window.location = '//' + snapshot.val();
-  });
-</script>
+<style>
+body {
+  font-family: Courier;
+  max-width: 540px;
+  margin:5em auto;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+pre {
+  background-color: #C6FA6C;
+  text-align: center;
+  padding: .5em;
+  font-size: .8em;
+  margin: 2em 0;
+}
+</style>
 </head>
 <body>
+
+<h1>Mobile Web Dev?</h1>
+<h3>Sick of typing your laptop's IP into your mobile web browser?</h3>
+
+<pre>
+curl -O http://lilup.co/lil && chmod +x lil && ./lil silliness 8080
+</pre>
+
+Then visit http://silliness.lilup.co from your mobile browser and be redirected to your development server.
+
 </body>
 </html>
