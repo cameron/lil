@@ -2,7 +2,7 @@
 <head>
 <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 <script>
-  var db = new Firebase("https://lil.firebaseio.com/" + window.location.hostname.replace('.lilup.io', ''));
+  var db = new Firebase("https://lil.firebaseio.com/" + window.location.hostname.replace('.lilup.co', ''));
   db.on('value', function(snapshot){
     window.location = '//' + snapshot.val();
   });
