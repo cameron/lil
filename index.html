@@ -5,29 +5,67 @@ body {
   font-family: Courier;
   max-width: 540px;
   margin:5em auto;
-  line-height: 1.4em;
+  line-height: 1.5em;
   font-size: 1.2em;
+  padding: 0 2em;
+}
+
+.small {
+  font-size: .7em;
+}
+
+code, .code {
+  background-color: #C6FA6C;
+  font-size: .8em;
+  padding: .5em;
+}
+
+li {
+  margin-bottom: 1em;
 }
 
 pre {
-  background-color: #C6FA6C;
   text-align: center;
-  padding: .5em;
-  font-size: .8em;
   margin: 2em 0;
 }
+
+.inline {
+  display: inline;
+}
+
+.colophon {
+  list-style: none;
+  font-size: .8em;
+}
+
+.co
+
 </style>
 </head>
 <body>
 
-<h1>Mobile Web Dev?</h1>
-<h3>Sick of typing your laptop's IP into your mobile web browser?</h3>
+<em>Are you a</em>
+<h1>Mobile Web Developer?</h1>
+<em>Are you sick of looking up your Mac's IP and typing it into your phone's browser?</em>
 
-<pre>
-curl -O http://lilup.co/lil && chmod +x lil && ./lil silliness 8080
-</pre>
+<ol>
+  <li>
+    <code>
+      curl -O http://lilup.co/lil && chmod +x lil && ./lil my-app 8080
+    </code>
+  </li>
+  <li>http://my-app.lilup.co will then redirect to your local dev server.</li>
+  <li>When your IP address changes, run <code>lil &lt;name&gt; [&lt;port&gt;]</code> again.</li>
+</ol>
+<p>No more typing IPs.</p>
 
-Then visit http://silliness.lilup.co from your mobile browser and be redirected to your development server.
+<br>
+<p class='small'>
+  And <a href='mailto:cameron.boehmer@gmail.com'>holler</a> if you know of a simple, cross-platform way to watch network interface addresses (without polling).
+</p>
+<br>
+<p class='small'>The source is on <a href='//github.com/cameron/lil'>github</a>.</p>
+<p class='small'>Cameron is on <a href='//twitter.com/camron'>twitter</a>.</p>
 
 </body>
 </html>
