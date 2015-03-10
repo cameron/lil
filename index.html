@@ -3,11 +3,15 @@
 <style>
 body {
   font-family: Courier;
-  max-width: 540px;
+  max-width: 560px;
   margin:5em auto;
   line-height: 1.5em;
   font-size: 1.2em;
   padding: 0 2em;
+}
+
+h1 {
+  position: relative;
 }
 
 .small {
@@ -44,10 +48,11 @@ pre {
 </head>
 <body>
 
-<em>Are you a</em>
-<h1>Mobile Web Developer?</h1>
-<em>Are you sick of looking up your Mac's IP and typing it into your phone's browser?</em>
-
+<h1>Lil</h1>
+<em>A command line utility for mobile web developers that will redirect a subdomain of lilup.co to the IP address of the machine you run it on.</em>
+<h4>Why Is That Useful?</h4>
+<p>It saves typing in your phone's browser each time the server's DHCP lease renews.</p>
+<h4>Okay, I'm In</h4>
 <ol>
   <li>
     <code>
@@ -57,15 +62,14 @@ pre {
   <li>http://my-app.lilup.co will then redirect to your local dev server.</li>
   <li>When your IP address changes, run <code>lil &lt;name&gt; [&lt;port&gt;]</code> again.</li>
 </ol>
-<p>No more typing IPs.</p>
 
 <br>
 <p class='small'>
-  And <a href='mailto:cameron.boehmer@gmail.com'>holler</a> if you know of a simple, cross-platform way to watch network interface addresses (without polling).
+  <a href='mailto:cameron.boehmer@gmail.com'>holler</a> if you know of a simple, cross-platform way to watch network interface addresses (without polling).
 </p>
 <br>
-<p class='small'>The source is on <a href='//github.com/cameron/lil'>github</a>.</p>
-<p class='small'>Cameron is on <a href='//twitter.com/camron'>twitter</a>.</p>
+<p class='small'>Source on <a href='//github.com/cameron/lil'>github</a>.</p>
+<p class='small'>Cameron on <a href='//twitter.com/camron'>twitter</a>.</p>
 
 </body>
 </html>
